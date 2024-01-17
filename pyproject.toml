@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "django-multidb"
+version = "0.1.0"
+description = ""
+authors = ["whc <249768447@qq.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "4.1.13"
+djongo = {git = "ssh://git@github.com/doableware/djongo.git", rev = "master", subdirectory = "djongo"}
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.4"
+pytest-forked = "^1.6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

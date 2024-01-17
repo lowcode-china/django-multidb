@@ -1,0 +1,20 @@
+asgiref==3.7.2
+colorlog==6.8.0
+Django==4.1.13
+# Editable install with no version control (django-multidb==0.1.0)
+-e /Users/whc/workspace/code/django-multidb
+djongo @ git+ssh://git@github.com/doableware/djongo.git@35f7ec3225eb4691700b189a4775c5fe258a63d3#subdirectory=djongo
+dnspython==2.4.2
+dynaconf==3.2.4
+exceptiongroup==1.2.0
+iniconfig==2.0.0
+packaging==23.2
+pluggy==1.3.0
+py==1.11.0
+pymongo==4.6.1
+pytest==7.4.4
+pytest-forked==1.6.0
+pytz==2023.3.post1
+sqlparse==0.2.4
+tomli==2.0.1
+typing_extensions==4.9.0
