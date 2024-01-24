@@ -1,8 +1,5 @@
-# pyright: reportGeneralTypeIssues=false,reportOptionalMemberAccess=false
-from typing import Any
 from django.db import models
 from typing_extensions import Self
-from django.db import router
 from django_multidb.models.deletion import Collector
 from django_multidb.models.fields.rel import RelField, RelManyField
 from django.db.models import Q

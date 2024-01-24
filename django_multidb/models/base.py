@@ -1,11 +1,7 @@
-# pyright: reportGeneralTypeIssues=false,reportOptionalMemberAccess=false
-
-from typing import Any
 from django.db import models
 from django.db import router
 from django_multidb.models.query import QuerySet
 from django_multidb.models.deletion import Collector
-from django.db.models.options import Options
 
 
 class BaseModel(models.Model):
@@ -15,10 +11,12 @@ class BaseModel(models.Model):
         if self.pk is None:
             raise ValueError(
                 "%s object can't be deleted because its %s attribute is set "
-                "to None." % (self._meta.object_name, self._meta.pk.attname)
+                "to None." % (self._meta.object_name, self._meta.pk.attname)  # type: ignore
             )
         using = using or router.db_for_write(self.__class__, instance=self)
-        collector = Collector(using=using, origin=self)
+
+        # ! Custom Collector, instead of using self.using, obtain the actual database of the related model through router.db_for_write.
+        collector = Collector(using=using, origin=self)  # type: ignore
         collector.collect([self], keep_parents=keep_parents)
         return collector.delete()
 
