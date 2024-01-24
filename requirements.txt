@@ -2,7 +2,6 @@ asgiref==3.7.2
 colorlog==6.8.0
 Django==4.1.13
 # Editable install with no version control (django-multidb==0.1.0)
--e /Users/whc/workspace/code/django-multidb
 djongo @ git+ssh://git@github.com/doableware/djongo.git@35f7ec3225eb4691700b189a4775c5fe258a63d3#subdirectory=djongo
 dnspython==2.4.2
 dynaconf==3.2.4
